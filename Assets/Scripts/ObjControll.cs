@@ -9,6 +9,8 @@ public class ObjControll : MonoBehaviour {
 	void Start () {
 		_info = gameObject.transform.FindChild("Info").gameObject;
 		_info.SetActive(false);
+		CameraFacingBillboard bc = _info.AddComponent<CameraFacingBillboard>();
+		bc.autoInit = true;
 	}
 	
 	// Update is called once per frame
@@ -18,5 +20,11 @@ public class ObjControll : MonoBehaviour {
 
 	void OnMouseDown() {
 		SceneController.instance.ShowPart(gameObject);
+		if (gameObject.name == "MainObj"){
+			PlayMakerFSM.BroadcastEvent(fsmEventName: "rotateNormal");
+		}
+		else{
+			PlayMakerFSM.BroadcastEvent(fsmEventName: "rotateParts");
+		}
 	}
 }
