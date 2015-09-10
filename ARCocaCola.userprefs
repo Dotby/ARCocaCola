@@ -2,11 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneController.cs">
     <Files>
-      <File FileName="Assets\Scripts\SceneController.cs" Line="82" Column="49" />
+      <File FileName="Assets\Scripts\SceneController.cs" Line="68" Column="67" />
       <File FileName="Assets\Scripts\ScreenShooter.cs" Line="1" Column="1" />
       <File FileName="Assets\Plugins\ScreenshotManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SoundController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ObjControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraFacingBillboard.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

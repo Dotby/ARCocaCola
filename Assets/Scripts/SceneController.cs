@@ -14,6 +14,8 @@ public class SceneController : MonoBehaviour {
 	int rotangle = 0;
 	public GameObject circle;
 
+	bool first = true;
+
 	void Awake () {
 		if (instance){
 			Destroy (gameObject);
@@ -35,7 +37,8 @@ public class SceneController : MonoBehaviour {
 	public void OpenScene(){
 		logoGui.Play("action");
 		_SOUND.Play("capOpen", 0.05f, 1f);
-		_parts[0].GetComponent<ObjControll>()._info.SetActive(true);
+		_parts[0].GetComponent<ObjControll>()._info.SetActive(false);
+
 	}
 
 	public void ShowPart(GameObject _pt){
@@ -59,8 +62,8 @@ public class SceneController : MonoBehaviour {
 		case "Obj3": _SOUND.Play("whisp1", 0.4f, 1f); rotangle = 287; break;
 		case "Obj4": _SOUND.Play("swish", 0.4f, 1f); rotangle = 113; break;
 		case "Obj5": _SOUND.Play("water", 0.4f, 1f); rotangle = 224; break;
-		case "Obj6": _SOUND.PlayMusic("bubbles", 0.35f, 1f, true);  rotangle = 76; break;
-			//case "Obj7": _SOUND.Play("swish", 0.4f, 1f); break;
+		case "Obj6": _SOUND.Play("swish", 0.4f, 1f);  rotangle = 76; break;
+		//case "Obj7": _SOUND.Play("swish", 0.4f, 1f); break;
 			
 		default: break;
 		}
@@ -105,6 +108,11 @@ public class SceneController : MonoBehaviour {
 
 	public void FoundMarker(){
 		_GUI.HideTip();
+
+		if (first == true){
+			first = false;
+			GameObject.Find("Hand").GetComponent<Animator>().Play("rot");
+		}
 	}
 
 	public void LostMarker(){

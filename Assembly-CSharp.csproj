@@ -665,6 +665,7 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
      <Compile Include="Assets\Scripts\CameraFacingBillboard.cs" />
+     <Compile Include="Assets\Scripts\CanBut.cs" />
      <Compile Include="Assets\Scripts\GUIController.cs" />
      <Compile Include="Assets\Scripts\Math3d.cs" />
      <Compile Include="Assets\Scripts\ObjControll.cs" />
