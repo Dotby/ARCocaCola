@@ -34,7 +34,11 @@ namespace HutongGames.PlayMakerEditor
 
         public void InitWindowTitle()
         {
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3
+            titleContent = new GUIContent(Strings.AboutPlaymaker_Title);            
+#else
             title = Strings.AboutPlaymaker_Title;
+#endif
         }
 
         public override void DoGUI()
@@ -48,10 +52,7 @@ namespace HutongGames.PlayMakerEditor
             GUILayout.Space(10);
             GUILayout.Label("© Hutong Games LLC. All Rights Reserved.", EditorStyles.miniLabel);
 
-            GUILayout.Label(!EditorApp.IsSourceCodeVersion
-                ? string.Format("Version 1.7.8.2")
-                : "Source Code Version");
-
+            GUILayout.Label("Version 1.7.8.3p2");
             if (VersionInfo.PlayMakerVersionInfo != "")
             {
                 EditorGUILayout.HelpBox(VersionInfo.PlayMakerVersionInfo, MessageType.None);

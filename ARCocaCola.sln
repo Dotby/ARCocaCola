@@ -7,8 +7,6 @@ Project("{0EE474F9-44EE-C1DE-7694-BC82229F40A2}") = "ARCocaCola", "Assembly-CSha
 EndProject
 Project("{0EE474F9-44EE-C1DE-7694-BC82229F40A2}") = "ARCocaCola", "Assembly-CSharp-Editor.csproj", "{F933D93C-6D9B-CABD-F428-85AEEB8E4EB4}"
 EndProject
-Project("{0EE474F9-44EE-C1DE-7694-BC82229F40A2}") = "ARCocaCola", "Assembly-UnityScript-Editor-firstpass.unityproj", "{76EDEE44-5E8B-E7F7-60B9-0DBA9A2FD712}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,15 +25,11 @@ Global
 		{F933D93C-6D9B-CABD-F428-85AEEB8E4EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F933D93C-6D9B-CABD-F428-85AEEB8E4EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F933D93C-6D9B-CABD-F428-85AEEB8E4EB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76EDEE44-5E8B-E7F7-60B9-0DBA9A2FD712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76EDEE44-5E8B-E7F7-60B9-0DBA9A2FD712}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76EDEE44-5E8B-E7F7-60B9-0DBA9A2FD712}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76EDEE44-5E8B-E7F7-60B9-0DBA9A2FD712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																	GlobalSection(MonoDevelopProperties) = preSolution
+																																							GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

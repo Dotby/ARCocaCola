@@ -212,6 +212,12 @@ static class PlayMakerMainMenu
 		EditorWindow.GetWindow<PlayMakerDocHelpers>(true);
 	}
 
+    [MenuItem(MenuRoot + "Tools/Run AutoUpdater", false, 30)]
+    public static void RunAutoUpdater()
+    {
+        PlayMakerAutoUpdater.RunAutoUpdate();
+    }
+
 
 	#endregion
 
@@ -283,7 +289,7 @@ static class PlayMakerMainMenu
     [MenuItem(MenuRoot + "Upgrade Guide", false, 46)]
     public static void OpenUpgradeGuide()
     {
-        EditorWindow.GetWindow<PlayMakerUpgradeGuide>(true);
+        PlayMakerUpgradeGuide.Open();
     }
 
     [MenuItem(MenuRoot + "About PlayMaker...", false, 47)]

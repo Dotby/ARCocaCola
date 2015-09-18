@@ -1,6 +1,17 @@
 // (c) Copyright HutongGames, LLC 2010-2012. All rights reserved.
 
-#if !(UNITY_FLASH || UNITY_NACL || UNITY_METRO || UNITY_WP8 || UNITY_WIIU || UNITY_PSM || UNITY_WEBGL)
+// Unity 5.1 introduced a new networking library. 
+// Unless we define PLAYMAKER_OLD_NETWORK old network actions are disabled
+#if (UNITY_5_1 || UNITY_5_2 || UNITY_5_3) && !PLAYMAKER_LEGACY_NETWORK
+#define UNITY_NEW_NETWORK
+#endif
+
+// Some platforms do not support networking (at least the old network library)
+#if (UNITY_FLASH || UNITY_NACL || UNITY_METRO || UNITY_WP8 || UNITY_WIIU || UNITY_PSM || UNITY_WEBGL || UNITY_PS3 || UNITY_PS4 || UNITY_XBOXONE)
+#define PLATFORM_NOT_SUPPORTED
+#endif
+
+#if !(PLATFORM_NOT_SUPPORTED || UNITY_NEW_NETWORK || PLAYMAKER_NO_NETWORK)
 
 using UnityEngine;
 
